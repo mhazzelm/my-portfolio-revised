@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body {
+    text-align: center;
+    font-size: 45px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bg.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  h1 {
+    margin-top: 60px;
+    font-family: 'Rocher';
+  }
+  
+  @font-palette-values --Grays {
+    font-family: Rocher;
+    base-palette: 9;
+  }
+  
+  .grays {
+    font-palette: --Grays;
+  }
+
+/* Style for the X button */
+header .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+header .close-button:hover {
+  color: white;
+  background-color: black;
+} 
+
+p {
+  margin: 20px;
+  margin-top: -50px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  border: inset;
+  border-radius: 20px;
+}
+  /* cert display */
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .mySlides {
+    max-width: 50%; 
+    height: 100%;  
+    display: none;
+    max-height: 500px;
+  }
+  
+
+  /* clickable button */
+.display-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.button-container {
+  display: flex;
+  position: absolute;
+  left: 25%;
+  right: 0;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  padding: 0;
+}
+
+.left,
+.right {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 15px;
+}

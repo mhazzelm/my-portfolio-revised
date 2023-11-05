@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:ital,wght@1,800&family=Playpen+Sans:wght@600&family=Roboto&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Hamburger Menu -->
+    <header>
+      <label>
+        <input type="checkbox" />
+        <span class="menu"> <span class="hamburger"></span> </span>
+        <ul>
+          <li>
+            <a href="about.html" class="font-effect-shadow-multiple"
+              >ABOUT ME</a
+            >
+          </li>
+          <li>
+            <a href="gallery.html" class="font-effect-shadow-multiple"
+              >GALLERY 0F MY LIFE</a
+            >
+          </li>
+          <li>
+            <a href="edback.html" class="font-effect-shadow-multiple"
+              >EDUCATIONAL BACKGROUND</a
+            >
+          </li>
+          <li>
+            <a href="skill.html" class="font-effect-shadow-multiple">SKILLS</a>
+          </li>
+          <li>
+            <a href="certificate.html" class="font-effect-shadow-multiple"
+              >CERTIFICATES</a
+            >
+          </li>
+          <li>
+            <a href="projects.html" class="font-effect-shadow-multiple"
+              >PROJECTS</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="font-effect-shadow-multiple"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </label>
+
+      <!-- Logo -->
+      <div class="logo-wrapper">
+        <img src="lg.png" alt="logo" />
+      </div>
+    </header>
+
+    <!-- Front Picture -->
+    <main>
+      <div class="mypic">
+        <img src="pic.jpg" alt="pic" />
+      </div>
+
+      <!-- Name -->
+      <h1 class="name-h1">Hi! I'm</h1>
+
+      <div class="name">
+        <span>M</span>
+        <span>A</span>
+        <span>R</span>
+        <span>I</span>
+        <span>T</span>
+        <span>O</span>
+        <span>N</span>
+        <span>I</span>
+        <span>&nbsp;</span>
+        <span>H</span>
+        <span>A</span>
+        <span>Z</span>
+        <span>Z</span>
+        <span>E</span>
+        <span>L</span>
+      </div>
+
+      <script>
+        const spans = document.querySelectorAll(".name > span");
+        spans.forEach((span, index) => {
+          span.style.animationDelay = `${(index + 2) * 0.2}s`; // Offset the delay for the first two spans
+          span.style.opacity = 1;
+        });
+      </script>
+
+      <!-- Downloadable Button -->
+      <div class="container">
+        <a href="resume.pdf" download="resume.pdf">
+          <button class="download-button">Download CV</button>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

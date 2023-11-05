@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+body {
+  text-align: center;
+  font-size: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  place-items: center;
+  background-image: url(bg.jpg);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Rocher';
+}
+
+@font-palette-values --Grays {
+  font-family: Rocher;
+  base-palette: 9;
+}
+
+.grays {
+  font-palette: --Grays;
+}
+
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Style for the X button */
+header .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+header .close-button:hover {
+  color: white;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+ }
+ 
+ :root {
+  --magnifier: 3;
+  --gap: 1vmin;
+  --transition: 0.5s;
+}
+  
+.container1, .container2, .container3, .container4 {
+  width: 95vw;
+  height: 19vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+
+img {
+  --brightness: 0.75;
+  --grayscale: 1;
+  transition: flex var(--transition), filter var(--transition);
+  height: 90%;
+  filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+  object-fit: cover;
+  overflow: hidden;
+  flex: 1;
+}
+
+img:hover {
+  --brightness: 1.15;
+  --grayscale: 0;
+  flex: var(--magnifier);
+}
+
+
